@@ -1,0 +1,140 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ListActivity"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="20dip"
+    android:layout_marginRight="10dip"
+    android:layout_marginLeft="10dip"
+    android:configChanges="keyboardHidden|orientation"
+    >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/bucketlist_string"
+        android:id="@+id/textView4"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/incomplete_list"
+            android:id="@+id/textView" />
+
+        <ListView
+            android:id="@+id/incomplete_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:dividerHeight="2dp"
+            android:longClickable="true"
+            android:layout_below="@+id/textView" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/complete_list"
+            android:id="@+id/textView5" />
+
+        <ListView
+            android:id="@+id/complete_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:dividerHeight="2dp"
+            android:longClickable="true"
+            android:layout_below="@+id/textView5" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|bottom"
+        android:layout_gravity="bottom|center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/edit_title"
+            android:id="@+id/textView3"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox android:id="@+id/checkbox_iBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/iBox"
+            android:layout_below="@+id/textView3"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox android:id="@+id/checkbox_cBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cBox"
+            android:layout_below="@+id/checkbox_iBox"
+            android:layout_alignParentLeft="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:inputType="text"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/checkbox_cBox"
+            android:layout_alignParentLeft="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/editText"
+            android:layout_alignParentLeft="true">
+
+            <Button
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:text="@string/add_item"
+                android:id="@+id/button"
+                android:layout_weight=".33" />
+
+            <Button
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:text="@string/clear_edit"
+                android:id="@+id/button3"
+                android:layout_weight=".33"
+                android:onClick="clearEdit" />
+
+            <Button
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:text="@string/remove_item"
+                android:id="@+id/button2"
+                android:layout_weight=".33" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
